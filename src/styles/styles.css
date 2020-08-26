@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Rubik&display=swap");
+:root {
+  --background: #22252b;
+  --section-background: #2a2e35;
+  --link-background: #f3ca20;
+  --title-color: #f3ca20;
+  --text-color: #b2becd;
+
+  --titles: "Poppins", sans-serif;
+  --subtitles: "Rubik", sans-serif;
+  --text: "Merriweather", serif;
+
+  --l-size: 2rem;
+}
+
+body {
+  background-color: var(--section-background);
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--titles);
+  color: var(--title-color);
+}
+
+p,
+a,
+span,
+li {
+  font-family: var(--subtittles);
+  color: var(--text-color);
+}
+
+a:hover {
+  color: var(--text-color);
+  cursor: pointer;
+}

@@ -1,0 +1,11 @@
+.tech-logos {
+  width: auto;
+  margin: 0 auto;
+  height: 50px;
+}
+
+.logo-container {
+  background: white;
+  padding: 1em;
+  border-radius: 5px;
+}

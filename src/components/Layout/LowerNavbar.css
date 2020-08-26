@@ -1,0 +1,9 @@
+.LowerNavbar {
+  background-color: var(--section-background);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}

@@ -1,0 +1,7 @@
+.description {
+  height: 95vh;
+}
+
+.stack-container {
+  background: var(--section-background);
+}
