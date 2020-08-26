@@ -32,7 +32,7 @@
 
 .navbar-toggler-icon {
   color: var(--titles);
-  background-image: url("../../../static/public/images/menu.svg");
+  background-image: url("../../images/menu.svg");
   background-repeat: no-repeat;
   background-size: inherit;
   margin: 0;
