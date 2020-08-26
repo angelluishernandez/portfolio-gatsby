@@ -1,11 +1,11 @@
-import realfooder from "../../static/public/images/projects/realfooder.png"
-import empresaurio from "../../static/public/images/projects/empresaurio.png"
-import ironnews from "../../static/public/images/projects/ironnews.png"
-import api from "../../static/public/images/projects/api.png"
-import expense from "../../static/public/images/projects/expense.png"
-import helpers from "../../static/public/images/projects/helpers.png"
-import solidarity from "../../static/public/images/projects/solidarity.png"
-import clothing from "../../static/public/images/projects/clothing.png"
+import realfooder from "../images/projects/realfooder.png"
+import empresaurio from "../images/projects/empresaurio.png"
+import ironnews from "../images/projects/ironnews.png"
+import api from "../images/projects/api.png"
+import expense from "../images/projects/expense.png"
+import helpers from "../images/projects/helpers.png"
+import solidarity from "../images/projects/solidarity.png"
+import clothing from "../images/projects/clothing.png"
 
 export const projects = [
   {
