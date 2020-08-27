@@ -20,7 +20,7 @@ const ContactForm = ({
           <h5>I will get back to you as soon as possible</h5>
           <form
             className="form-group"
-            onSubmit={handleSubmit}
+            // onSubmit={handleSubmit}
             method="post"
             name="contact"
             data-netlify="true"
