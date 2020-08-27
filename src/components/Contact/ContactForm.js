@@ -26,6 +26,7 @@ const ContactForm = ({
             data-netlify-honeypot="bot-field"
           >
             {/* The following input is necessary for netlify to work */}
+
             <input type="hidden" name="form-name" value="contact" />
 
             <label htmlFor="name">Your name </label>
