@@ -18,7 +18,14 @@ const ContactForm = ({
           <h3>Do you want to get in touch?</h3>
           <h5>Please leave message</h5>
           <h5>I will get back to you as soon as possible</h5>
-          <form className="form-group" onSubmit={handleSubmit}>
+          <form
+            className="form-group"
+            onSubmit={handleSubmit}
+            method="post"
+            name="contact"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
             <label htmlFor="name">Your name </label>
             <input
               type="text"
