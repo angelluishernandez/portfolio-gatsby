@@ -1,8 +1,13 @@
 import React from "react"
-import { projects } from "../../constants/projects"
+
 import ProjectCard from "./ProjectCard"
 
-const ProjectsContainer = ({ toggleModal, modalIsOpen }) => {
+const ProjectsContainer = ({
+  toggleModal,
+  modalIsOpen,
+  projects,
+  onProjectSelect,
+}) => {
   return (
     <div className="container-fluid" id="projects">
       <div className="row">
@@ -12,6 +17,7 @@ const ProjectsContainer = ({ toggleModal, modalIsOpen }) => {
             key={index}
             toggleModal={toggleModal}
             modalIsOpen={modalIsOpen}
+            onProjectSelect={onProjectSelect}
           />
         ))}
       </div>

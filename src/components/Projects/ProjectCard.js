@@ -2,7 +2,13 @@ import React from "react"
 import { CardContainer } from "../UI/CardContainer"
 import { ButtonContainer } from "../UI/ButtonContainer"
 
-const ProjectCard = ({ modalIsOpen, project, toggleModal }) => {
+const ProjectCard = ({
+  modalIsOpen,
+  project,
+  toggleModal,
+  onProjectSelect,
+}) => {
+  const { id, img, github, link, isFinished, title } = project
   return (
     <CardContainer className="col-12 col-lg-4 mx-auto mb-2">
       <div className="project-card d-flex flex-column">
@@ -16,34 +22,34 @@ const ProjectCard = ({ modalIsOpen, project, toggleModal }) => {
             ) : null} */}
           </div>
           <img
-            src={project.img}
+            src={img}
             alt="..."
             className={`my-auto project-img ${
-              !project.isFinished ? "not-finished" : null
+              !isFinished ? "not-finished" : null
             }`}
-            onClick={id => toggleModal(project.id)}
+            onClick={() => onProjectSelect(id)}
           />
         </div>
 
         <div className="card-body text-center mx-auto">
-          <h5 className="card-title text-center">{project.title}</h5>
+          <h5 className="card-title text-center">{title}</h5>
         </div>
         <ButtonContainer
-          onClick={() => toggleModal(project.id)}
+          onClick={() => onProjectSelect(id)}
           className="mx-auto mb-3"
         >
           Check details
         </ButtonContainer>
         <div className="d-flex justify-content-center">
           <ButtonContainer>
-            <a href={project.github} target="blank">
+            <a href={github} target="blank">
               Check code
             </a>
           </ButtonContainer>
           <span> </span>
 
           <ButtonContainer>
-            <a href={project.link} target="blank">
+            <a href={link} target="blank">
               Check online
             </a>
           </ButtonContainer>
