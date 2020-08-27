@@ -54,7 +54,7 @@ const Contact = () => {
       message: emailForm.message,
     }
 
-    handleValidation({ ...emailToSend })
+    // handleValidation({ ...emailToSend })
 
     // POST LOGIC HERE
   }
