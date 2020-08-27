@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import ContactForm from "./ContactForm"
 
-const EMAIL_PATTERN = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-
 const Contact = () => {
   const [emailForm, setEmailForm] = useState({
     name: "",
@@ -11,8 +9,6 @@ const Contact = () => {
     message: "",
   })
 
-  const [errors, setErrors] = useState(false)
-  const [errorMessage, setErrorMessage] = useState({})
   const [emailSent, setEmailSent] = useState(false)
 
   const resetForm = () => {
@@ -25,6 +21,7 @@ const Contact = () => {
   }
 
   const handleChange = e => {
+    setEmailSent(false)
     setEmailForm({
       ...emailForm,
       [e.target.name]: e.target.value,
@@ -45,7 +42,10 @@ const Contact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...emailForm }),
     })
-      .then(() => alert("Success!"))
+      .then(() => {
+        setEmailSent(true)
+        resetForm()
+      })
       .catch(error => alert(error))
 
     e.preventDefault()
@@ -53,8 +53,6 @@ const Contact = () => {
 
   const props = {
     handleSubmit,
-    errors,
-    errorMessage,
     emailSent,
     setEmailForm,
     emailForm,
