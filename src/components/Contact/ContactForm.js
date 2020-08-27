@@ -7,8 +7,7 @@ const ContactForm = ({
   errors,
   errorMessage,
   emailSent,
-  setEmailForm,
-  emailForm,
+  handleChange,
 }) => {
   return (
     <div className="container contact">
@@ -20,20 +19,21 @@ const ContactForm = ({
           <h5>I will get back to you as soon as possible</h5>
           <form
             className="form-group"
-            // onSubmit={handleSubmit}
+            onSubmit={handleSubmit}
             method="post"
             name="contact"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
+            {/* The following input is necessary for netlify to work */}
+            <input type="hidden" name="form-name" value="contact" />
+
             <label htmlFor="name">Your name </label>
             <input
               type="text"
               className="form-control"
               name="name"
-              onChange={e =>
-                setEmailForm({ ...emailForm, name: e.target.value })
-              }
+              onChange={handleChange}
             />
             {errors && <h5 className="form-error">{errorMessage.name}</h5>}
 
@@ -42,9 +42,7 @@ const ContactForm = ({
               type="text"
               className="form-control"
               name="email"
-              onChange={e =>
-                setEmailForm({ ...emailForm, email: e.target.value })
-              }
+              onChange={handleChange}
             />
             {errors && <h5 className="form-error">{errorMessage.email}</h5>}
 
@@ -53,9 +51,7 @@ const ContactForm = ({
               type="text"
               className="form-control"
               name="subject"
-              onChange={e =>
-                setEmailForm({ ...emailForm, subject: e.target.value })
-              }
+              onChange={handleChange}
             />
             {errors && <h5 className="form-error">{errorMessage.subject}</h5>}
 
@@ -64,9 +60,7 @@ const ContactForm = ({
               type="text"
               className="form-control"
               name="message"
-              onChange={e =>
-                setEmailForm({ ...emailForm, message: e.target.value })
-              }
+              onChange={handleChange}
             />
             {errors && <h5 className="form-error">{errorMessage.message}</h5>}
 

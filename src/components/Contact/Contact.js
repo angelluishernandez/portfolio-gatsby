@@ -24,39 +24,31 @@ const Contact = () => {
     })
   }
 
-  const handleValidation = ({ name, email, subject, message }) => {
-    if (name === "") {
-      setErrors(true)
-      setErrorMessage({ name: "You must provide a name, please" })
-    } else if (
-      email === undefined ||
-      EMAIL_PATTERN.test(String(email).toLocaleLowerCase())
-    ) {
-      setErrors(true)
-      setErrorMessage({ email: "You must provide a valid email, please" })
-    } else if (subject === undefined) {
-      setErrors(true)
-      setErrorMessage({ subject: "You must provide a subject, please" })
-    } else if (message === undefined) {
-      setErrors(true)
-      setErrorMessage({ message: "You must provide a subject, please" })
-    } else {
-      setErrors(false)
-    }
+  const handleChange = e => {
+    setEmailForm({
+      ...emailForm,
+      [e.target.name]: e.target.value,
+    })
+  }
+
+  // This method is necessary for netlify contact form to work
+
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
   }
 
   const handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...emailForm }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
+
     e.preventDefault()
-    const emailToSend = {
-      name: emailForm.name,
-      email: emailForm.email,
-      subject: emailForm.subject,
-      message: emailForm.message,
-    }
-
-    // handleValidation({ ...emailToSend })
-
-    // POST LOGIC HERE
   }
 
   const props = {
@@ -66,6 +58,7 @@ const Contact = () => {
     emailSent,
     setEmailForm,
     emailForm,
+    handleChange,
   }
 
   return <ContactForm {...props} />
