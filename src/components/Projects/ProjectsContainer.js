@@ -9,7 +9,7 @@ const ProjectsContainer = ({
   onProjectSelect,
 }) => {
   return (
-    <div className="container-fluid" id="projects">
+    <div className="container-fluid mb-5" id="projects">
       <div className="row">
         {projects.map((project, index) => (
           <ProjectCard
