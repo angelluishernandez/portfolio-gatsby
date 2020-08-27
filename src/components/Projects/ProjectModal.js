@@ -32,17 +32,24 @@ const ProjectModal = ({ modalIsOpen, toggleModal, selectedProject }) => {
                   </div>
                 </div>
               </div>
-              <ButtonContainer>
-                <a href={selectedProject.github} target="blank">
-                  Check code
-                </a>
-              </ButtonContainer>
-              <span> </span>
-              <ButtonContainer>
-                <a href={selectedProject.link} target="blank">
-                  Check online
-                </a>
-              </ButtonContainer>
+              <div className="d-flex">
+                <div className="row">
+                  <div className="col-sm-6 col-xs-12 d-flex justify-content-center ">
+                    <ButtonContainer className="w-50 m-2">
+                      <a href={selectedProject.github} target="blank">
+                        Check code
+                      </a>
+                    </ButtonContainer>
+                  </div>
+                  <div className="col-sm-6 col-xs-12 d-flex justify-content-center">
+                    <ButtonContainer className="w-50 m-2">
+                      <a href={selectedProject.link} target="blank">
+                        Check online
+                      </a>
+                    </ButtonContainer>
+                  </div>
+                </div>
+              </div>
             </div>
           </CardContainer>
         </ModalContainer>

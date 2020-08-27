@@ -36,23 +36,28 @@ const ProjectCard = ({
         </div>
         <ButtonContainer
           onClick={() => onProjectSelect(id)}
-          className="mx-auto mb-3"
+          className="mx-auto mb-3 w-50"
         >
           Check details
         </ButtonContainer>
-        <div className="d-flex justify-content-center">
-          <ButtonContainer>
-            <a href={github} target="blank">
-              Check code
-            </a>
-          </ButtonContainer>
-          <span> </span>
 
-          <ButtonContainer>
-            <a href={link} target="blank">
-              Check online
-            </a>
-          </ButtonContainer>
+        <div className="d-flex justify-content-center">
+          <div className="row">
+            <div className="col-sm-6 col-xs-12">
+              <ButtonContainer>
+                <a href={github} target="blank">
+                  Check code
+                </a>
+              </ButtonContainer>
+            </div>
+            <div className="col-sm-6 col-xs-12">
+              <ButtonContainer>
+                <a href={link} target="blank">
+                  Check online
+                </a>
+              </ButtonContainer>
+            </div>
+          </div>
         </div>
       </div>
     </CardContainer>

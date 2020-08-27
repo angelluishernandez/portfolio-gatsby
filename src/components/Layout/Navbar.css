@@ -18,12 +18,10 @@
 .navbar-colored {
   background-color: var(--background);
 }
-#nav-name {
+#nav-name span {
   font-family: var(--titles);
-  font-weight: 400;
-  font-size: 1.5em;
+  font-weight: bolder;
   text-decoration: none;
-
   margin: 0 100px 0 40px;
 }
 #nav-name:hover {
@@ -41,12 +39,12 @@
 
 .link-item {
   text-decoration: none;
-
+  padding: 0.5em;
   background: linear-gradient(
-    to right,
-    var() --link-background 0%,
-    var() --link-background 100%
+    var(--link-background) 0%,
+    var(--link-background) 100%
   );
+
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 4px 4px;
@@ -67,7 +65,7 @@
   }
   #nav-name {
     font-size: 1em;
-    border-bottom: 3px solid var() --link-background;
+    width: 50% !important;
   }
 
   .full-text {

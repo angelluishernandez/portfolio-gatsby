@@ -4,6 +4,7 @@ import ironnews from "../images/projects/ironnews.png"
 import api from "../images/projects/api.png"
 import expense from "../images/projects/expense.png"
 import helpers from "../images/projects/helpers.png"
+import portfolio from "../images/projects/portfolio.png"
 import solidarity from "../images/projects/solidarity.png"
 import clothing from "../images/projects/clothing.png"
 
@@ -17,7 +18,7 @@ export const projects = [
     link: "https://angelluishernandez.github.io/Ironhack-Web-App/",
     github: "https://github.com/angelluishernandez/ironhack-game",
     description:
-      "Primer proyecto de Ironhack. El Realfooder es un tower-defense en el que tienes que evitar la comida no saludable y consumir la más saludable",
+      "Ironhack's first project. El Realfooder is a tower-defense game in which the player has to avoid unhealthy food and eat healthy meals",
     description2: "Desarrollado con Javascript, HTML y CSS",
     isIronhack: true,
   },
@@ -30,7 +31,7 @@ export const projects = [
     link: "https://empresaurio.herokuapp.com",
     github: "https://github.com/angelluishernandez/empresaurio",
     description:
-      "Segundo proyecto de Ironhack. Empresaurio es una aplicación que permite a los empleados de una empresa registrar cuando fichan en su trabajo. Al mismo tiempo los miembros de recursos humanos pueden controlar los fichajes de los trabajadores",
+      "Ironhack's second project. Empresaurio is an app that allows companies and their HR personel and employees to keep track of the hour at which the later clock in",
     description2:
       "Desarrollado con Javascript, HTML, CSS, Bootstrap, MongoDB, NodeJS, Express",
     isIronhack: true,
@@ -53,7 +54,7 @@ export const projects = [
     link: "https://ironnewsapi.herokuapp.com",
     github: "https://github.com/angelluishernandez/iron-news-front",
     description:
-      "Tercer proyecto de Ironhack. En Ironnews, el usuario puede consultar y almacenar noticias de su interes gracias a la API newsapi.org",
+      "Ironhack's third and final project. In Ironnews, the user can search for relevant news and store them thanks to the newsapi.org API. The project has evolved overtime to include Redux as state handler and Scss as Css preprocessor",
     description2:
       "Desarrollado con Javascript, HTML, CSS, Bootstrap, React y API Rest",
     isIronhack: true,
@@ -66,7 +67,8 @@ export const projects = [
     img: api,
     link: "https://ironnewsapi.herokuapp.com",
     github: "https://github.com/angelluishernandez/Ironnews-api",
-    description: "Tercer proyecto de Ironhack. Back para IronNews",
+    description:
+      "Ironhack's third project. This is the backend where Ironnews with all the endpoints necessary for it to run and where user management functions live",
     description2: "Desarrollado con MongoDB, NodeJS, Express",
     isIronhack: true,
   },
@@ -93,35 +95,12 @@ export const projects = [
     github:
       "https://github.com/angelluishernandez/expensetracker-redux-project-",
     description:
-      "Proyecto personal. Una aplicación que permite contabilizar gastos",
+      "My first incursion in Firebase as a back-end. It also helped me to improve my Redux knowledge that would be later used in improving Ironnews. This was my first personal project",
     description2:
       "Desarrollado con Javascript, HTML, CSS, Bootstrap,  NodeJS, Express, React (Redux, Hooks y Context), Firebase",
     isIronhack: false,
   },
-  {
-    id: 6,
-    isFinished: false,
-    title: "Solidarity",
-    techs: [
-      "JS",
-      "CSS",
-      "HTML",
-      "BOOTSTRAP",
-      "API REST",
-      "REACT",
-      "REDUX",
-      "REACT-HOOKS",
-      "REACT-CONTEXT",
-    ],
-    img: solidarity,
-    link: "",
-    github: "https://github.com/angelluishernandez/solidarity",
-    description:
-      "Proyecto personal. Una red social que permite poner en común lo que no necesitamos para ayudar a quienes más lo necesitan",
-    description2:
-      "Desarrollado con Javascript, HTML, CSS, Bootstrap,  NodeJS, Express, React (Redux, Hooks y Context)",
-    isIronhack: true,
-  },
+
   {
     id: 7,
     isFinished: false,
@@ -142,35 +121,33 @@ export const projects = [
     link: "",
     github: "https://github.com/angelluishernandez/helpers",
     description:
-      "Proyecto personal. Una aplicación que permite al usuario registrar tareas con sus pasos correspondientes",
+      "This is personal project in which I wanted to create a visualy appealing app using Material Design. It is an app that allows users to create their own tutorials for simple things by using steps to explain them",
     description2:
       "Desarrollado con Javascript, HTML, CSS, Bootstrap,  NodeJS, Express, React (Redux, Hooks y Context), Firebase",
     isIronhack: true,
   },
+
   {
     id: 8,
     isFinished: false,
-    title: "React-clothing",
+    title: "My portfolio",
     techs: [
       "JS",
       "CSS",
       "HTML",
       "BOOTSTRAP",
-      "API REST",
+      "GATSBY",
+      "NETLIFY",
       "REACT",
-      "REDUX",
       "REACT-HOOKS",
-      "REACT-CONTEXT",
-      "FIREBASE",
-      "STYLED COMPONENTS",
     ],
-    img: clothing,
-    link: "",
-    github: "https://github.com/angelluishernandez/helpers",
+    img: portfolio,
+    link: "https://stoic-wright-507644.netlify.app/contact/",
+    github: "https://github.com/angelluishernandez/portfolio-gatsby",
     description:
-      "Proyecto personal. Una aplicación que permite al usuario registrar tareas con sus pasos correspondientes",
+      "This is my personal portfolio. If you are reading this it means you can have a look at it :). It was created using Gatsby and Netlify",
     description2:
-      "Desarrollado con Javascript, HTML, CSS, Bootstrap, Styled Components, NodeJS, Express, React (Redux, Hooks y Context), Firebase",
+      "Desarrollado con Javascript, HTML, CSS, Bootstrap,  NodeJS, Express, React (Redux, Hooks y Context), Firebase",
     isIronhack: true,
   },
 ]

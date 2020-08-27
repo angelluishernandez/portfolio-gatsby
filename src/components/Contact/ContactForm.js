@@ -65,7 +65,7 @@ const ContactForm = ({
             />
             {errors && <h5 className="form-error">{errorMessage.message}</h5>}
 
-            <ButtonContainer type="submit" className="mt-2">
+            <ButtonContainer type="submit" className="mt-3 w-50">
               Send
             </ButtonContainer>
           </form>

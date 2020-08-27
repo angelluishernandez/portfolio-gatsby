@@ -6,7 +6,7 @@ import "./LowerNavbar.css"
 
 const LowerNavbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg LowerNavbar">
+    <nav className="navbar navbar-expand-lg LowerNavbar mt-3">
       <div className="navbar-item">
         <a href="https://github.com/angelluishernandez" target="blank">
           <FontAwesomeIcon icon={faGithub} />

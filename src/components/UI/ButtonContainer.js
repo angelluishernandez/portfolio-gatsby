@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const ButtonContainer = styled.button`
   background-color: transparent;
   border: 2px solid var(--link-background);
-  width: 30%;
+  width: 100%;
   color: var(--link-background);
   overflow: auto;
 
